@@ -1,0 +1,4 @@
+C:\Users\chriz\Documents\Developer\Proyecto Blazor\EventEase\publish\sample-data\weather.json
+C:\Users\chriz\Documents\Developer\Proyecto Blazor\EventEase\publish\EventEase.runtimeconfig.json
+C:\Users\chriz\Documents\Developer\Proyecto Blazor\EventEase\publish\dotnet.js
+C:\Users\chriz\Documents\Developer\Proyecto Blazor\EventEase\publish\web.config
