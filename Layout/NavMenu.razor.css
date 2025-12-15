@@ -1,0 +1,42 @@
+/* Contenedor del menú lateral */
+.navbar {
+    background-color: #6c757d; /* Gris sobrio */
+}
+
+/* Texto general del menú */
+.navbar a,
+.navbar .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+/* Hover */
+.navbar a:hover,
+.navbar .nav-link:hover {
+    background-color: #5a6268;
+    color: #ffffff;
+}
+
+/* Elemento activo */
+.navbar .nav-link.active {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+/* Título del menú (EventEase) */
+.navbar-brand {
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Evita que se vea "lavado" */
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+}
+
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}

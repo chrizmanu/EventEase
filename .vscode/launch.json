@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "EventEase (F5)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "run-watch",
+      "program": "dotnet",
+      "args": ["watch", "run"],
+      "cwd": "${workspaceFolder}",
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "Now listening on:\\s+(https?://\\S+)"
+      }
+    }
+  ]
+}

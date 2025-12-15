@@ -1,0 +1,27 @@
+@using EventEase.Models
+
+<div class="card p-3 mb-3">
+    <h5>@Event.Name</h5>
+
+    <p>
+        <strong>Date:</strong> @Event.Date.ToShortDateString() <br />
+        <strong>Location:</strong> @Event.Location
+    </p>
+
+    <div class="d-flex gap-2">
+        <NavLink class="btn btn-sm btn-primary"
+                 href="@($"/events/{Event.Id}")">
+            Details
+        </NavLink>
+
+        <NavLink class="btn btn-sm btn-success"
+                 href="@($"/register/{Event.Id}")">
+            Register
+        </NavLink>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Event Event { get; set; } = default!;
+}

@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "run-watch",
+      "type": "process",
+      "command": "dotnet",
+      "args": ["watch", "run"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "owner": "csharp",
+          "pattern": [
+            {
+              "regexp": "^(.*)\\((\\d+),(\\d+)\\):\\s+(warning|error)\\s+([A-Z0-9]+):\\s+(.*)$",
+              "file": 1,
+              "line": 2,
+              "column": 3,
+              "severity": 4,
+              "code": 5,
+              "message": 6
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^dotnet watch.*Building",
+            "endsPattern": "Now listening on:\\s+(https?://\\S+)"
+          }
+        }
+      ]
+    }
+  ]
+}

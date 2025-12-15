@@ -1,0 +1,28 @@
+@page "/events"
+@using EventEase.Models
+@using EventEase.Services
+
+<h1>Events</h1>
+
+@if (events is null || events.Count == 0)
+{
+    <p>No events available.</p>
+}
+else
+{
+    <Virtualize Items="events" Context="ev" ItemSize="110">
+        <ItemContent>
+            <EventCard Event="ev" />
+        </ItemContent>
+    </Virtualize>
+}
+
+@code {
+    private List<Event> events = new();
+
+    protected override void OnInitialized()
+    {
+        // Si tu repositorio devuelve IReadOnlyList, lo convertimos a List
+        events = EventRepository.GetAll().ToList();
+    }
+}
